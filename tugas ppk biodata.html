@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Web Pribadi Saya</title>
+    <style>
+        body,
+        h1,
+        h2,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-top: 0cm;
+            margin-right: 3cm;
+            margin-bottom: 1cm;
+            margin-left: 2cm;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #315078;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #486d9d;
+            color: #fff;
+            margin-top: 2px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li{
+            display: inline;
+            margin-right: 55px;
+            margin-left: 25px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            justify-content: space-around;
+            background-color: #315078;
+        }
+
+        .kontainer {
+            display: flex;
+            padding: 10px;
+        }
+
+        .profile-img {
+            max-width: 60%;
+            height: auto;
+            text-align: center;
+            margin-left: 1.6cm;
+            margin-left: 1.5cm;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .kontak-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .profil-box {
+            border: 2px solid #315078;
+            padding: 25px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            background-color: #f9f9f9;
+        }
+
+        .profil-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .profil-detail {
+            font-size: 16px;
+            color: #070707;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .sidebar {
+            background: #e3e3e3;
+            flex: 1;
+            padding: 10px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .konten-utama {
+            background: white;
+            flex: 3;
+            padding: 10px;
+        }
+
+        .konten-utama artikel {
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #000000;
+        }
+
+        .pendidikan {
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .education-item {
+            border: 2px solid #315078;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .education-item h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .education-item p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .jadwal-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .jadwal-table th,
+        .jadwal-table td {
+            border: 1px solid #03347e;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .jadwal-table th {
+            background-color: #315078;
+            color: #fff;
+        }
+
+        .jadwal-table tbody tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        .aktivitas {
+            padding: 20px;
+        }
+
+        .activity {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .activity-details {
+            padding: 10px;
+            border: 1px solid #315078;
+            background-color: #f7f7f7;
+        }
+
+        .activity-description {
+            padding: 10px;
+            border: 1px solid #315078;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .activity h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .activity p {
+            margin: 5px 0;
+        }
+
+        #key-skills {
+            padding: 20px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            flex: 0 0 40px;
+            font-size: 24px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+        .icon i {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #315078;
+            color: #fff;
+            border-radius: 50%;
+        }
+
+        #key-skills {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .skill {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .skill-details {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #315078;
+            background-color: #f7f7f7;
+        }
+
+        .skill h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .skill p {
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #315078;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <marquee behavior="scroll" direction="left">
+            Selamat datang di situs web saya
+        </marquee>
+        <header>
+            <h1>Selamat Datang di Situs Web Saya</h1>
+        </header>
+            <nav>
+                <ul>
+                    <li><a onclick="showSection('home')">HOME</a></li>
+                    <li><a onclick="showSection('pendidikan')">PENDIDIKAN</a></li>
+                    <li><a onclick="showSection('jadwal-kuliah')">JADWAL KULIAH</a></li>
+                    <li><a onclick="showSection('aktivitas')">AKTIVITAS</a></li>
+                    <li><a onclick="showSection('key-skills')">KEY SKILLS DAN KOMPETENSI</a></li>
+                </ul>
+            </nav>
+
+        <section id="home">
+            <h2></h2>
+            <div class="kontainer">
+                <div class="sidebar">
+                    <img src="pas foto .jpg" alt="Foto Saya" class="profile-img">
+                    <h2>Kontak</h2>
+                    <div class="kontak-item">
+                        <img src="logo telp.png" alt="Logo Telepon" class="logo">
+                        <p>Nomor Telepon: 081359997536</p>
+                    </div>
+
+                    <div class="kontak-item">
+                        <img src="email.png" alt="Logo Email" class="logo">
+                        <p>Email: sherlyanaads266@gmail.com</p>
+                    </div>
+
+                    <div class="kontak-item">
+                        <img src="instagram.jpeg" alt="Logo Instagram" class="logo">
+                        <p>Instagram: @sherlyanaa.ds</p>
+                    </div>
+                </div>
+                <div class="konten-utama">
+                    <article>
+                        <h2>Tentang Saya</h2>
+                        <p>Halo, nama saya Sherlyana Devita Sari. Saya berumur 20 tahun. Saya mahasiswa semester 5 dari
+                            jurusan Matematika di Universitas Islam Negeri Maulana Malik Ibrahim Malang. Saya sedang
+                            meniti karir untuk mengembangkan ilmu dan mencari pengalaman kerja.</p>
+
+                        <div class="profil-box">
+                            <h3 class="profil-title">Biodata Saya</h3>
+                            <ul class="profil-detail">
+                                <li><strong>Nama:</strong> Sherlyana Devita Sari</li>
+                                <li><strong>Usia:</strong> 20 tahun</li>
+                                <li><strong>Alamat:</strong> JL Kauman RT 06 RW 02 Turen Malang</li>
+                                <li><strong>Pendidikan Terakhir:</strong> SMA Jurusan IPA</li>
+                                <li><strong>Pekerjaan:</strong> Mahasiswa</li>
+                                <li><strong>Status Perkawinan:</strong> Belum Kawin</li>
+                                <li><strong>Hobi:</strong> Travelling dan Musik</li>
+                                <li><strong>Cita-cita:</strong> ASN</li>
+                                <li><strong>Motto Hidup:</strong> Motivasi tanpa aksi hanya halusinasi</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan">
+            <h2>Pendidikan</h2>
+            <div class="education-item">
+                <h3>SD Negeri 1 Turen</h3>
+                <p>Tahun: 2009 - 2015</p>
+            </div>
+            <div class="education-item">
+                <h3>MTs Negeri 1 Malang</h3>
+                <p>Tahun: 2015 - 2018</p>
+            </div>
+            <div class="education-item">
+                <h3>SMA Negeri 1 Turen</h3>
+                <p>Tahun: 2018 - 2021</p>
+            </div>
+            <div class="education-item">
+                <h3>UIN Maulana Malik Ibrahim Malang</h3>
+                <p>Tahun: 2021 - sekarang</p>
+            </div>
+        </section>
+
+        <section id="jadwal-kuliah">
+            <h2>Jadwal Kuliah</h2>
+            <table class="jadwal-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Hari</th>
+                        <th>Jam</th>
+                        <th>Mata Kuliah</th>
+                        <th>Dosen</th>
+                        <th>Ruangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Senin</td>
+                        <td>06:30 - 08:10</td>
+                        <td>Pemrograman Komputer II</td>
+                        <td>Mohammad Nafie Jauhari,M.Si</td>
+                        <td>Ruang Meeting</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Selnin</td>
+                        <td>09:00 - 10:40</td>
+                        <td>Praktikum Pemrograman Komputer II</td>
+                        <td>Mohammad Nafie Jauhari,M.Si</td>
+                        <td>Laboratorium Komputer Dasar</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Senin</td>
+                        <td>14:00 - 15:40</td>
+                        <td>Praktikum Pemodelan Matematika</td>
+                        <td>Nurul Anggraeni Hidayati,S.Mat.,M.Mat</td>
+                        <td>Laboratorium Pemodelan</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Selasa</td>
+                        <td>06:30 - 09:00</td>
+                        <td>Analisis Numerik I</td>
+                        <td>Nurul Anggraeni Hidayati,S.Mat.,M.Mat</td>
+                        <td>B 208</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Selasa</td>
+                        <td>09:00 - 10:40</td>
+                        <td>Riset Sosial</td>
+                        <td>Rhia Dhea Layla Nur Kharisma,M.Si</td>
+                        <td>Laboratorium Pemodelan</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rabu</td>
+                        <td>06:30 - 09:00</td>
+                        <td>Statistika Matematika</td>
+                        <td>Fachrur Rozi,M.Si</td>
+                        <td>Ruang Diskusi</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Rabu</td>
+                        <td>09:00 - 11:30</td>
+                        <td>Geometri Analitik</td>
+                        <td>Intan Nisfulaila,M.Si</td>
+                        <td>B 207</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Rabu</td>
+                        <td>12:20 - 14:50</td>
+                        <td>Analisis Kompleks</td>
+                        <td>Dr.Elly Susanti,S.Pd.,M.Sc</td>
+                        <td>Ruang Meeting</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Kamis</td>
+                        <td>06:30 - 08:10</td>
+                        <td>Riset Sosial</td>
+                        <td>Fachrur Rozi,M.Si</td>
+                        <td>Laboratorium Statistika</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Kamis</td>
+                        <td>09:50 - 11:30</td>
+                        <td>Pemodelan Matematika</td>
+                        <td>Dr.Usman Pagalay,M.Si</td>
+                        <td>B 208</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="aktivitas">
+            <h2>Aktivitas</h2>
+            <div class="activity">
+                <div class="activity-details">
+                    <h3>Anggota Aktif Osis MTS Negeri 1 Malang</h3>
+                    <p>Posisi: Anggota Aktif</p>
+                    <p>Tahun: 2015 - 2018</p>
+                </div>
+                <div class="activity-description">
+                    <p>Deskripsi: Berperan aktif dalam mengembangkan organisasi, kompetensi anggota, pendorong
+                        berkembangnya kemampuan dan kreativitas siswa</p>
+                </div>
+
+                <div class="activity-details">
+                    <h3>Anggota Aktif Jurnalistik SMA Negeri 1 Turen</h3>
+                    <p>Posisi: Anggota Aktif</p>
+                    <p>Tahun: 2018 - 2021</p>
+                </div>
+                <div class="activity-description">
+                    <p>Deskripsi : Berperan aktif dalam mengembangkan organisasi, terutama terkait menulis, mengedit
+                        foto dan video, serta mengirim salinan dari program di sekolah</p>
+                </div>
+
+                <div class="activity-details">
+                    <h3>Panitia KOMET 2021</h3>
+                    <p>Posisi: Divisi Daminoff</p>
+                    <p>Tahun: 2021</p>
+                </div>
+                <div class="activity-description">
+                    <p>Deskripsi : Membantu bagian dalam kepanitiaan yang mengurusi administrasi dalam mengadakan dan
+                        mengelola dokumen-dokumen yang diperlukan dalam kegiatan</p>
+                </div>
+
+                <div class="activity-details">
+                    <h3>Magang Digital Marketing</h3>
+                    <p>Posisi: SEO</p>
+                    <p>Tahun: 2023</p>
+                </div>
+                <div class="activity-description">
+                    <p>Deskripsi : Membantu bagian dalam kepanitiaan yang mengurusi administrasi dalam mengadakan dan
+                        mengelola dokumen-dokumen yang diperlukan dalam kegiatan</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="key-skills">
+            <h2>Key Skills & Kompetensi</h2>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <div class="skill-details">
+                    <h3>Team Work</h3>
+                    <p>Dapat berperan sebagai anggota tim yang mengedepankan sinergitas dalam mencapai tujuan bersama.
+                    </p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-clock"></i></div>
+                <div class="skill-details">
+                    <h3>Organizational Skill</h3>
+                    <p>Mampu membagi waktu dengan baik, menyusun prioritas, berkomitmen terhadap deadline, dan mampu
+                        bekerja secara multitasking.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-camera"></i></div>
+                <div class="skill-details">
+                    <h3>Fotografi dan Videografi</h3>
+                    <p>Dapat melakukan pemotretan terhadap barang, orang, maupun sebuah tempat/pemandangan, serta mampu
+                        mengedit sebuah foto/video menjadi menarik.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                <div class="skill-details">
+                    <h3>Desain Grafis</h3>
+                    <p>Dapat membuat beberapa desain minimalis dan menarik seperti logo, poster, dan power point melalui
+                        aplikasi Canva.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <p>&copy; Sherlyana Devita Sari </p>
+        </footer>
+
+        <script>
+            function showSection(sectionId) {
+                var sections = document.querySelectorAll('section');
+                sections.forEach(function (section) {
+                    section.style.display = 'none';
+                });
+
+                var sectionToShow = document.getElementById(sectionId);
+                if (sectionToShow) {
+                    sectionToShow.style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+
+</html>
